@@ -1,0 +1,38 @@
+<%-include("partials/header.ejs")-%>
+<div class="formCovering">
+
+    <form action="/make" method="POST">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Name Of The Page</label>
+            <input type="text"  required="true" class="form-control" name="name" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Your Full Name</label>
+            <input type="text" required="true" class="form-control" name="name" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Phone Number</label>
+            <input type="number" required="true" class="form-control" name="name" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Picture Of Your Adhar Card</label>
+            <input type="file" required="true" required="true" class="form-control" name="name" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">A Picture Of Your Face</label>
+            <input type="file" required="true" required="true" class="form-control" name="name" id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<style>
+    .formCovering{
+        padding: 5% 5%;
+    }
+</style>
+<%-include("partials/footer.ejs")-%>

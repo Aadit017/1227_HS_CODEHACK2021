@@ -1,0 +1,39 @@
+<%-include("partials/header.ejs")-%>
+<div class="containerCover">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <button type="button" class="btn btn-outline-success">button1</button>
+            </div>
+            <div class="col-lg-4">
+                <button type="button" class="btn btn-outline-danger">button2</button>
+            </div>
+            <div class="col-lg-4">
+                <button type="button" class="btn btn-outline-dark">button3</button>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .col{ 
+        padding: 10px 20px;
+    }
+    .containerCover  { 
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @media (max-width:1110px) {
+        .containerCover  { 
+      margin: 18.5px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }   
+    }
+</style>
+
+<%-include("partials/footer.ejs")-%>
