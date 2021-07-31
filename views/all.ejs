@@ -1,4 +1,38 @@
 <%-include("partials/header.ejs")-%>
 
+<% report.reverse() %> 
 
+<!-- most important above one , makes it possible for the new products to be shown above -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+<div class="input-group">
+    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+      aria-describedby="search-addon" />
+    <button type="button" class="btn btn-outline-primary">search</button>
+  </div>
+        </div>
+        </div>
+        </div>
+<% report.forEach(function(reports) { %><div class="container">
+    <div class="card text-center">
+        <div class="card-header">
+          <%=reports.productName%>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"><%=reports.productPrice%></h5>
+          <p class="card-text"> <%=reports.productCode%> </p>
+        <div class="card-footer text-muted">
+            <%=reports.sellersName%>
+        </div>
+      </div>
+</div>
+
+<style>
+    .row{
+        padding: 5% 0;
+    }
+</style>
+
+<% }) %>
 <%-include("partials/footer.ejs")-%>

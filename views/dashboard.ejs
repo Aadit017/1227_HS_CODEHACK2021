@@ -3,7 +3,6 @@
 <!--add products // thro form add all the products an array so that they can be filtered -->
 
 
-
 <div class="container">
     <div class="row">
         <div class="col-lg-12 col-md-6 col-sm-6">
@@ -18,7 +17,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Product Code</label>
-                    <input type="prod" class="form-control" id="exampleInputEmail1" placeholder="write down a code for the product" aria-describedby="emailHelp" name="code">
+                    <input type="prod" class="form-control" readonly id="exampleInputEmail1" value=<%=randomId%> aria-describedby="emailHelp" name="code">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Sellers Name</label>
@@ -104,6 +103,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                flex-direction: column;
             }
             @media(max-width:850px){ 
                 .container { 

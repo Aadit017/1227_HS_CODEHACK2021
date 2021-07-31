@@ -4,6 +4,13 @@
     <p>Team 1227</p>
   </div>
 </div>
+<script>
+  $(document).ready(function(){
+     $(window).scroll(function(){
+         $('.footer').css("opacity", 1- $(window).scrollTop() / 800)
+     })
+ })
+</script>
 <style>
     .footer-padding {
 	padding-bottom: 60px;
@@ -16,6 +23,7 @@
 	width: 100%;
 	height: 60px;
 	background-color: #111514;
+  opacity: 1;
 }
 
 .footer p {

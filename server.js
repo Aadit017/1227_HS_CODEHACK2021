@@ -33,6 +33,16 @@ let demoName2={
 }
 
 checkForPassword.push(demoName2)
+//!-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+let productsForDemo =[] 
+//!-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+let demoProblem={ 
+    productName:"Oxygen cylinder",
+    productPrice:4000,
+    productCode:"sdf3j23bjg",
+    sellersName:"Ramesh"
+}
+productsForDemo.push(demoProblem)
 
 
 app.get('/',function(req,res){
@@ -42,6 +52,12 @@ app.get('/',function(req,res){
 
 app.get('/make', function(req,res){
     res.render("make")
+})
+
+app.get('/all',function(req,res){ 
+    for(let i =0;i<productsForDemo.length;i++){ 
+        res.render("all",{report:productsForDemo})
+    }
 })
 
 
@@ -71,12 +87,23 @@ app.get('/all/:marketsname',function(req,res){
     }
 })
 
+var crypto = require("crypto");
+var randomid = crypto.randomBytes(10).toString('hex');
 
 app.get('/dashboard',function(req,res){
-    res.render("dashboard")
+    res.render("dashboard",{randomId:randomid})
+})
+app.post('/dashboard',function(req,res){ 
+    let adsItem= { 
+        productName:req.body.prod,
+        productPrice:req.body.price,
+        productCode:req.body.code,
+        sellersName:req.body.pname
+    }
+    productsForDemo.push(adsItem)
+    res.redirect('/all')
 })
 
-
-app.listen(3000,function(){
+app.listen(process.env.PORT || 3000,function(){
     console.log(" server has started ");
 })
