@@ -1,0 +1,126 @@
+<%-include("partials/header.ejs")-%>
+
+<!--add products // thro form add all the products an array so that they can be filtered -->
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-6">
+            <form action="/dashboard" method="POST">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Product Name</label>
+                    <input type="prod" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="prod">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Product Price</label>
+                    <input type="prod" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="price">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Product Code</label>
+                    <input type="prod" class="form-control" id="exampleInputEmail1" placeholder="write down a code for the product" aria-describedby="emailHelp" name="code">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Sellers Name</label>
+                    <input type="prod" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="pname">
+                </div>
+                <button type="submit" class="btn btn-outline-dark padding-below-50">Submit</button>
+            </form>
+        </div>
+        </div>
+        
+<div class="col-lg-6 col-md-12 col-sm-6">
+
+    <ol class="list-group list-group-numbered">
+        <li class="list-group-item d-flex justify-content-between align-items-start pad">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Subheading</div>
+                Cras justo odio
+            </div>
+            <span class="badge bg-primary rounded-pill">14</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start pad">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Subheading</div>
+                Cras justo odio
+            </div>
+            <span class="badge bg-primary rounded-pill">14</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start pad">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Subheading</div>
+                Cras justo odio
+            </div>
+            <span class="badge bg-primary rounded-pill">14</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start pad">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Subheading</div>
+                Cras justo odio
+            </div>
+            <span class="badge bg-primary rounded-pill">14</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start pad">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Subheading</div>
+                Cras justo odio
+            </div>
+            <span class="badge bg-primary rounded-pill">14</span>
+        </li>
+    </ol>
+</div>
+</div>
+          
+
+<div class="toast mt-3">
+    <div class="toast-header">
+        Hey There!
+    </div>
+            <div class="toast-body">
+               Best Viewed on Desktop.
+              This is your dashboard. You can add products , check your notications and respond the messages.
+            </div>
+          </div>
+        </div>
+        
+       <style>
+           .pad{
+               padding: 5% 0;
+           }
+           .padding-below-50{
+               margin-bottom: 30%;
+               width:100%;
+               /* justify-content: ; */
+           }
+           .toast{
+               opacity: 0.4;
+           }
+       </style>
+
+        
+        <script>
+        $(document).ready(function(){
+                $('.toast').toast('show');
+            });    
+        </script>
+        <style>
+            .container{ 
+                padding: 5% 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            @media(max-width:850px){ 
+                .container { 
+                    padding: 10% 0;
+                    display: flex;
+                    flex-shrink: 1;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: space-around;
+                }
+            }
+        </style>
+
+<%-include("partials/footer.ejs")-%>
