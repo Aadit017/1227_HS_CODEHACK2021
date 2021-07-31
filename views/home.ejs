@@ -1,19 +1,39 @@
 <%-include("partials/header.ejs")-%>
-<div class="containerCover">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-12 col-sm-12">
-                <button type="button" class="btn btn-outline-success">button1</button>
-            </div>
-            <div class="col-lg-4 col-md-12 col-sm-12">
-                <button type="button" class="btn btn-outline-danger">button2</button>
-            </div>
-            <div class="col-lg-4 col-md-12 col-sm-12">
-                <button type="button" class="btn btn-outline-dark">button3</button>
-            </div>
-        </div>
-    </div>
-</div>
+<div id="vantajs">
+
+    <style>
+        #vantajs {
+        position:absolute;
+        top: 55px; 
+        bottom: 20px;
+        width: 100%;
+        z-index: -9912;
+    }
+    </style>
+    
+    <script>
+    VANTA.BIRDS({
+      el: "#vantajs",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      backgroundColor: 0xede344,
+      birdSize: 1.20,
+      wingSpan: 33.00,
+      speedLimit: 6.00,
+      separation: 38.00
+    });
+    
+    /* code highlight */
+    $(document).ready(function(){
+      hljs.initHighlightingOnLoad();
+    });
+        </script>
+    
 <style>
     .col{ 
         padding: 10px 20px;
