@@ -89,10 +89,10 @@ app.get('/all/:marketsname',function(req,res){
     }
 })
 
-var crypto = require("crypto");
-var randomid = crypto.randomBytes(10).toString('hex');
 
+var crypto = require("crypto");
 app.get('/dashboard',function(req,res){
+    var randomid = crypto.randomBytes(10).toString('hex');    
     res.render("dashboard",{randomId:randomid})
 })
 app.post('/dashboard',function(req,res){ 
