@@ -20,8 +20,8 @@
           <%=reports.productName%>
         </div>
         <div class="card-body">
-          <h5 class="card-title"><%=reports.productPrice%></h5>
-          <p class="card-text"> <%=reports.productCode%> </p>
+          <h5 class="card-title"><%=reports.productPrice%> rs</h5>
+          <p class="card-text td"><%=reports.productCode%> </p>
         <div class="card-footer text-muted">
             <%=reports.sellersName%>
         </div>
@@ -31,6 +31,13 @@
 <style>
     .row{
         padding: 5% 0;
+    }
+    .td{ 
+      text-decoration: underline;
+      color: darkblue;
+    }
+    .td:hover{
+      cursor: context-menu;
     }
 </style>
 

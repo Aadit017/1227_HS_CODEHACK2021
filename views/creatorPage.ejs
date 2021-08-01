@@ -1,8 +1,33 @@
 <%-include("partials/header.ejs")-%>
 
-<h1><%=cpEmail%></h1>
-<p><%=cpName%></p>
+
+
+<div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <p><%=cpEmail%></p>
+      </li>
+
+      <li class="list-group-item"> 
 <p><%=cpnumber%></p>
-<p><%=cpfname%></p>
+      </li>
+
+      <li class="list-group-item">
+        <p><%=cpName%></p>        
+        </li>
+        <li class="list-group-item">
+            <p><%=cpfname%></p>
+        </li>
+    </ul>
+  </div>
+
+<style>
+    .card{
+        position: absolute;
+        position: absolute;
+  top: 50%; right: 50%;
+  transform: translate(50%,-50%);
+    }
+</style>
 
 <%-include("partials/footer.ejs")-%>

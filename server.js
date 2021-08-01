@@ -12,7 +12,9 @@ let storageForMiniMarket=[] //~ this shall be changed later , as a database shal
 
 let somethingLol={ //! remember to delete this  
     email:"baggaaadit017@gmail.com",
-    name:"oxygen_only"
+    name:"oxygen_only",
+    number:"8146033882",
+    fullname:"Ramesh Kumar"
 }
 
 storageForMiniMarket.push(somethingLol)
@@ -66,7 +68,7 @@ app.post('/make',function(req,res){
         email:req.body.email,
         name:req.body.name,
         number:req.body.number,
-        fname:req.body.fname,
+        fullname:req.body.fname,
         passw:req.body.password
     }
     let forPasswordCheck={ 
@@ -82,7 +84,7 @@ app.post('/make',function(req,res){
 app.get('/all/:marketsname',function(req,res){
     for(let i=0;i<storageForMiniMarket.length;i++){ 
         if(req.params.marketsname==storageForMiniMarket[i].name){
-            res.render("creatorPage",{cpEmail:storageForMiniMarket[i].email,cpName:storageForMiniMarket[i].name,cpfname:storageForMiniMarket[i].fname,cpnumber:storageForMiniMarket[i].number})
+            res.render("creatorPage",{cpEmail:storageForMiniMarket[i].email,cpName:storageForMiniMarket[i].name,cpfname:storageForMiniMarket[i].fullname,cpnumber:storageForMiniMarket[i].number})
         }
     }
 })
